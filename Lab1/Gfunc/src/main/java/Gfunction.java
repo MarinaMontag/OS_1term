@@ -1,3 +1,5 @@
+import spos.lab1.demo.IntOps;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,12 +13,15 @@ public class Gfunction {
 
     public static void main(String[] args) throws InterruptedException {
         try {
-            Socket pipe = new Socket(hostName, portNumber);
-            BufferedReader in = new BufferedReader(new InputStreamReader(pipe.getInputStream()));
-            PrintWriter out = new PrintWriter(pipe.getOutputStream(), true);
+            Socket socket = new Socket(hostName, portNumber);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             Integer x =Integer.parseInt(in.readLine());
             x=function(x);
             out.println(x);
+            in.close();
+            out.close();
+            socket.close();
         } catch (UnknownHostException e) {
             System.err.println("Unknown host " + hostName);
             System.exit(1);
@@ -27,8 +32,6 @@ public class Gfunction {
     }
 
     public static Integer function(Integer x) throws InterruptedException {
-        Thread.sleep(500);
-        x+=6;
-        return x;
+        return new IntOps().funcG(x);
     }
 }
