@@ -1,10 +1,12 @@
+import spos.lab1.demo.IntOps;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import spos.lab1.demo.IntOps;
+
 
 public class Ffunction {
     public static String hostName = "localhost";
