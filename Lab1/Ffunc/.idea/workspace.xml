@@ -82,12 +82,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Manager" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OS_1term\Lab1\Ffunc\build\classes\java\main" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -96,9 +101,26 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.Ffunc [jar]">
+    <configuration name="Ffunction (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ffunction" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Ffunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ffunction" />
       <module name="Ffunc.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,8 +182,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Ffunc [classes]" />
         <item itemvalue="Gradle.Ffunc [jar]" />
+        <item itemvalue="Application.Ffunction (1)" />
+        <item itemvalue="Gradle.Ffunc [classes]" />
         <item itemvalue="Gradle.Ffunc" />
         <item itemvalue="Application.Ffunction" />
       </list>
@@ -192,7 +215,10 @@
       <workItem from="1607004123786" duration="434000" />
       <workItem from="1607107020545" duration="1854000" />
       <workItem from="1607418304290" duration="773000" />
-      <workItem from="1607419987084" duration="676000" />
+      <workItem from="1607419987084" duration="2714000" />
+      <workItem from="1607438478222" duration="84000" />
+      <workItem from="1607438691111" duration="101000" />
+      <workItem from="1607442797553" duration="867000" />
     </task>
     <servers />
   </component>
@@ -216,26 +242,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1606991930457" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607419478359">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607443039313">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607419478359" />
-    <state width="1323" height="281" key="GridCell.Tab.0.bottom" timestamp="1607419480256">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607443039313" />
+    <state width="1323" height="281" key="GridCell.Tab.0.bottom" timestamp="1607443022782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="281" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607419480256" />
-    <state width="1323" height="281" key="GridCell.Tab.0.center" timestamp="1607419480255">
+    <state width="1323" height="281" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607443022782" />
+    <state width="1323" height="281" key="GridCell.Tab.0.center" timestamp="1607443022782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="281" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607419480255" />
-    <state width="1323" height="281" key="GridCell.Tab.0.left" timestamp="1607419480255">
+    <state width="1323" height="281" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607443022782" />
+    <state width="1323" height="281" key="GridCell.Tab.0.left" timestamp="1607443022772">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="281" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607419480255" />
-    <state width="1323" height="281" key="GridCell.Tab.0.right" timestamp="1607419480255">
+    <state width="1323" height="281" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607443022772" />
+    <state width="1323" height="281" key="GridCell.Tab.0.right" timestamp="1607443022782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="281" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607419480255" />
+    <state width="1323" height="281" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607443022782" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1607003084776">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -256,9 +282,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607107565396" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607420068751">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607443022742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607420068751" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607443022742" />
   </component>
 </project>

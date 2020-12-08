@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 
 public class Gfunction {
     public static String hostName = "localhost";
-    public static int portNumber = 4444;
+    public static int portNumber = 62370;
 
     public static void main(String[] args) throws InterruptedException {
         try {
@@ -17,7 +17,7 @@ public class Gfunction {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             int x =Integer.parseInt(in.readLine());
-            x=IntOps.funcF(x);
+            x=IntOps.funcG(x);
             out.println(x);
             in.close();
             out.close();

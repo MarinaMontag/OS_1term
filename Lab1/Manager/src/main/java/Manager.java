@@ -9,13 +9,12 @@ import java.util.concurrent.*;
 public class Manager {
     private static ServerSocket server;
     private static int x;
+    private static boolean gotNull;
     private static int result;
-    ;
     public static ExecutorService executor;
     private static String FDir;
     private static String GDir;
     public static List<Future<Integer>> funcResults;
-    private static Cancellation cancellation;
 
     Manager() throws IOException {
         setX();
@@ -23,7 +22,15 @@ public class Manager {
         setServer();
         setExecutor();
         setProcesses();
-        funcResults = new ArrayList<>();
+        funcResults = new ArrayList<>(2);
+    }
+
+    public static int start() throws IOException, InterruptedException, ExecutionException {
+        Cancellation cancellation = new Cancellation();
+        cancellation.start();
+        startFunctions();
+        processingResults();
+        return result;
     }
 
     public static int getX() {
@@ -36,25 +43,8 @@ public class Manager {
         x = scanner.nextInt();
     }
 
-    public static void start() throws IOException, InterruptedException, ExecutionException {
-        Cancellation cancellation = new Cancellation();
-        cancellation.start();
-        CountDownLatch countDownLatch = new CountDownLatch(1);
-        startFunctions(countDownLatch);
-        countDownLatch.await();
-        handleZero();
-        processingResults();
-        shutdown();
-        closeServer();
-        System.exit(0);
-    }
-
-    private static void shutdown() {
-        executor.shutdown();
-    }
-
     private static void setServer() throws IOException {
-        server = new ServerSocket(4444);
+        server = new ServerSocket(62370);
     }
 
     private static void setProjectDir() {
@@ -73,31 +63,77 @@ public class Manager {
         Process gProcess = Runtime.getRuntime().exec("java -jar " + GDir);
     }
 
-    private static void startFunctions(CountDownLatch countDownLatch) throws IOException {
+    private static void startFunctions() throws IOException {
         for (int i = 0; i < 2; i++) {
             Socket socket = server.accept();
-            funcResults.add(executor.submit(new GetFG(socket, countDownLatch)));
+            funcResults.add(executor.submit(new GetFG(socket)));
         }
     }
 
-    private static void handleZero() throws ExecutionException, InterruptedException {
-        if (funcResults.get(0).get() == 0) {
-            System.out.println("Got Null");
-            System.out.println("Result: " + result);
-            System.exit(0);
+    private static boolean handleZero() throws ExecutionException, InterruptedException {
+        if (funcResults.get(0).isDone() && funcResults.get(0).get() == 0 &&
+                !funcResults.get(1).isDone())
+            return true;
+        else return false;
+    }
+
+    private static void processingResults() throws ExecutionException, InterruptedException, IOException {
+        if (!funcResults.get(1).isDone()) {
+            for (int i = 0; i < 50; i++) {
+                if (!funcResults.get(0).isDone())
+                    if (handleZero()) {
+                        gotNull = true;
+                        System.out.println("Got 0 firstly");
+                        break;
+                    }
+                executor.awaitTermination(100, TimeUnit.MILLISECONDS);
+                if (funcResults.get(0).isDone() && funcResults.get(1).isDone())
+                    break;
+            }
         }
-    }
-
-    private static void processingResults() throws ExecutionException, InterruptedException {
-        executor.awaitTermination(10,TimeUnit.MILLISECONDS);
-        System.out.println("Got results");
-        System.out.println("f: " + funcResults.get(0).get());
-        System.out.println("g: " + funcResults.get(1).get());
-        result = funcResults.get(0).get() * funcResults.get(1).get();
-        System.out.println("Result: " + result);
-    }
-
-    private static void closeServer() throws IOException {
+        if (!gotNull) {
+            boolean computedF = displayResult(0, "f");
+            boolean computedG = displayResult(1, "g");
+            if (computedF && computedG) {
+                result = funcResults.get(0).get() * funcResults.get(1).get();
+            } else if (!gotNull) {
+                System.out.println("Result is undefined");
+                executor.shutdown();
+                server.close();
+                System.exit(0);
+            }
+        }
+        executor.shutdown();
         server.close();
     }
+
+    private static boolean displayResult(int i, String func) throws ExecutionException, InterruptedException {
+        if (funcResults.get(i).isDone()) {
+            System.out.println(func + ": " + funcResults.get(i).get());
+            if (funcResults.get(i).get() == 0)
+                gotNull = true;
+            return true;
+        } else {
+            System.out.println("Function " + func + " hasn't been computed yet");
+            return false;
+        }
+    }
+
+    private static void shutdownAndAwaitTermination() throws ExecutionException {
+        try {
+            if (!executor.awaitTermination(10, TimeUnit.SECONDS)) {
+                executor.shutdownNow(); // Cancel currently executing tasks
+                if (!executor.awaitTermination(10, TimeUnit.SECONDS)) {
+                    displayResult(0, "f");
+                    displayResult(1, "g");
+                    System.exit(0);
+                }
+            }
+        } catch (InterruptedException ie) {
+            executor.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
+    }
 }
+
+
