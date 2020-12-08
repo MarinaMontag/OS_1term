@@ -61,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ffunc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -78,15 +78,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,6 +114,14 @@
       <workItem from="1606822383994" duration="96000" />
       <workItem from="1606826966584" duration="680000" />
       <workItem from="1606827800288" duration="16021000" />
+      <workItem from="1606889988453" duration="336000" />
+      <workItem from="1606892714778" duration="1832000" />
+      <workItem from="1606988477770" duration="2696000" />
+      <workItem from="1607004125336" duration="435000" />
+      <workItem from="1607107696641" duration="2111000" />
+      <workItem from="1607246902567" duration="129000" />
+      <workItem from="1607310140933" duration="142000" />
+      <workItem from="1607418493559" duration="2682000" />
     </task>
     <servers />
   </component>
@@ -147,45 +153,68 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606844451281" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606845896880">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1607108173627">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606845896880" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1606845898839">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607108173627" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607310280549">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606845898839" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1606845898839">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607310280549" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1607420470414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606845898839" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1606845898839">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607420470414" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1607420470414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606845898839" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1606845898839">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607420470414" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1607420470414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606845898839" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1606822197754">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607420470414" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1607420470414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606822197754" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1606822197754">
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607420470414" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1607420470415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606822197754" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1606822197754">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607420470415" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1607420470415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606822197754" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1606822197754">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607420470415" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1607420470414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606822197754" />
-    <state x="274" y="0" key="new project wizard" timestamp="1605190166945">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607420470414" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1607420470415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="274" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1605190166945" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607420470415" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607108173628">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607108173628" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607113166336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607113166336" />
+    <state x="274" y="0" key="new project wizard" timestamp="1607421429569">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1607421429569" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GetFG.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

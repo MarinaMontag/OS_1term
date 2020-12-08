@@ -16,8 +16,8 @@ public class Gfunction {
             Socket socket = new Socket(hostName, portNumber);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            Integer x =Integer.parseInt(in.readLine());
-            x=function(x);
+            int x =Integer.parseInt(in.readLine());
+            x=IntOps.funcF(x);
             out.println(x);
             in.close();
             out.close();
@@ -29,9 +29,5 @@ public class Gfunction {
             System.err.println("Couldn't get I/O for the connection to " + hostName + ".." + e.toString());
             System.exit(1);
         }
-    }
-
-    public static Integer function(Integer x) throws InterruptedException {
-        return new IntOps().funcG(x);
     }
 }

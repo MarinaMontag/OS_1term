@@ -36,6 +36,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -78,9 +81,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ffunc" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -89,10 +92,21 @@
       <command value="gradle jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Gfunction">
+  <component name="RunManager" selected="Gradle.Gfunc [jar]">
     <configuration name="Gfunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gfunction" />
       <module name="Gfunc.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,6 +149,9 @@
       <workItem from="1605076585217" duration="1829000" />
       <workItem from="1606465720865" duration="129000" />
       <workItem from="1606826804137" duration="159000" />
+      <workItem from="1607107330528" duration="1537000" />
+      <workItem from="1607418437964" duration="52000" />
+      <workItem from="1607419483120" duration="1508000" />
     </task>
     <servers />
   </component>
@@ -158,33 +175,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606826851829" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606826962517">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607419979330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606826962517" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1604853966376">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607419979330" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1607420168790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604853966376" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1604853966375">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607420168790" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1607420168788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604853966375" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1604853966375">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607420168788" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1607420168788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604853966375" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1604853966375">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607420168788" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1607420168788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604853966375" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1606826888343">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607420168788" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1607107541560">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606826888343" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1604853943072">
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607107541560" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607420168746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604853943072" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607420168746" />
   </component>
 </project>
