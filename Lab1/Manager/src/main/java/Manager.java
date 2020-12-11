@@ -80,8 +80,7 @@ public class Manager {
     private static void processingResults() throws ExecutionException, InterruptedException, IOException {
         if (!funcResults.get(1).isDone()) {
             for (int i = 0; i < 50; i++) {
-                if (!funcResults.get(0).isDone())
-                    if (handleZero()) {
+                if (funcResults.get(0).isDone()&&handleZero()){
                         gotNull = true;
                         System.out.println("Got 0 firstly");
                         break;
