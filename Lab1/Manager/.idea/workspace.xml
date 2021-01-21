@@ -78,19 +78,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -130,6 +117,7 @@
       <workItem from="1608722437105" duration="50000" />
       <workItem from="1611219782125" duration="399000" />
       <workItem from="1611220278826" duration="356000" />
+      <workItem from="1611242130878" duration="88000" />
     </task>
     <servers />
   </component>
@@ -165,10 +153,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607108173627" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1611220636516">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1611242150068">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611220636516" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611242150068" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1611220638497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

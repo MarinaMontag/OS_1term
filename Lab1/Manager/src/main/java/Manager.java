@@ -71,39 +71,42 @@ public class Manager {
     }
 
     private static boolean handleZero() throws ExecutionException, InterruptedException {
-        if (funcResults.get(0).isDone() && funcResults.get(0).get() == 0 &&
-                !funcResults.get(1).isDone())
+        if ((funcResults.get(0).isDone() && funcResults.get(0).get() == 0 )||
+                (funcResults.get(1).isDone() && funcResults.get(1).get() == 0 ))
             return true;
         else return false;
     }
 
     private static void processingResults() throws ExecutionException, InterruptedException, IOException {
-        if (!funcResults.get(1).isDone()) {
-            for (int i = 0; i < 50; i++) {
-                if (funcResults.get(0).isDone()&&handleZero()){
-                        gotNull = true;
-                        System.out.println("Got 0 firstly");
-                        break;
-                    }
-                executor.awaitTermination(100, TimeUnit.MILLISECONDS);
-                if (funcResults.get(0).isDone() && funcResults.get(1).isDone())
-                    break;
+
+        while(!funcResults.get(0).isDone()||!funcResults.get(1).isDone()) {
+            if (handleZero()){
+                gotNull = true;
+                System.out.println("Got 0 firstly");
+                break;
             }
+            executor.awaitTermination(100, TimeUnit.MILLISECONDS);
+            if (funcResults.get(0).isDone() && funcResults.get(1).isDone())
+                break;
         }
-        if (!gotNull) {
-            boolean computedF = displayResult(0, "f");
-            boolean computedG = displayResult(1, "g");
-            if (computedF && computedG) {
-                result = funcResults.get(0).get() * funcResults.get(1).get();
-            } else if (!gotNull) {
-                System.out.println("Result is undefined");
-                executor.shutdown();
-                server.close();
-                System.exit(0);
-            }
-        }
+
+        if (!gotNull)
+            display();
         executor.shutdown();
         server.close();
+    }
+
+    public static void display() throws ExecutionException, InterruptedException, IOException {
+        boolean computedF = displayResult(0, "f");
+        boolean computedG = displayResult(1, "g");
+        if (computedF && computedG) {
+            result = funcResults.get(0).get() * funcResults.get(1).get();
+        } else if (!gotNull) {
+            System.out.println("Result is undefined");
+            executor.shutdown();
+            server.close();
+            System.exit(0);
+        }
     }
 
     private static boolean displayResult(int i, String func) throws ExecutionException, InterruptedException {
@@ -115,22 +118,6 @@ public class Manager {
         } else {
             System.out.println("Function " + func + " hasn't been computed yet");
             return false;
-        }
-    }
-
-    private static void shutdownAndAwaitTermination() throws ExecutionException {
-        try {
-            if (!executor.awaitTermination(10, TimeUnit.SECONDS)) {
-                executor.shutdownNow(); // Cancel currently executing tasks
-                if (!executor.awaitTermination(10, TimeUnit.SECONDS)) {
-                    displayResult(0, "f");
-                    displayResult(1, "g");
-                    System.exit(0);
-                }
-            }
-        } catch (InterruptedException ie) {
-            executor.shutdownNow();
-            Thread.currentThread().interrupt();
         }
     }
 }
